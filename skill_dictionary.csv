@@ -1,0 +1,42 @@
+skill,category
+python,Programming
+java,Programming
+c++,Programming
+c#,Programming
+javascript,Programming
+sql,Databases
+mysql,Databases
+postgresql,Databases
+mongodb,Databases
+pandas,Data Handling
+numpy,Data Handling
+excel,Data Handling
+power bi,Data Handling
+data visualization,Data Handling
+statistics,Data Handling
+machine learning,Machine Learning
+scikit-learn,Machine Learning
+deep learning,Machine Learning
+tensorflow,Machine Learning
+pytorch,Machine Learning
+nlp,Machine Learning
+transformers,Machine Learning
+hugging face,Machine Learning
+spacy,Machine Learning
+opencv,Machine Learning
+cnn,Machine Learning
+yolo,Machine Learning
+image processing,Machine Learning
+llm,AI
+rag,AI
+apis,Tools
+fastapi,Tools
+docker,Cloud & DevOps
+kubernetes,Cloud & DevOps
+aws,Cloud & DevOps
+azure,Cloud & DevOps
+gcp,Cloud & DevOps
+git,Tools
+github,Tools
+mlflow,Cloud & DevOps
+streamlit,Tools

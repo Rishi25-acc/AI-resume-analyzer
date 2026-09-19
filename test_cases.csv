@@ -1,0 +1,25 @@
+test_id,module,scenario,input,expected_result,status
+TC01,resume_parser,Valid PDF upload,resume.pdf under 5MB,File validated and text extracted,Pending
+TC02,resume_parser,Valid DOCX upload,resume.docx under 5MB,File validated and text extracted,Pending
+TC03,resume_parser,Unsupported file type,resume.txt,Validation fails with clear error message,Pending
+TC04,resume_parser,File too large,resume.pdf over 5MB,Validation fails with size error message,Pending
+TC05,resume_parser,Empty file,0-byte file,Validation fails with empty-file error,Pending
+TC06,resume_parser,Scanned/image-only PDF,scanned_resume.pdf,Little/no text extracted; app shows friendly warning,Pending
+TC07,text_cleaner,Lowercasing,Mixed-case resume text,All output text is lowercase,Pending
+TC08,text_cleaner,Protected tokens preserved,"Text containing C++, C#, .NET, Node.js","Tokens remain intact and unmangled in cleaned output",Pending
+TC09,text_cleaner,URL/email removal,Text with a URL and email address,URLs and emails removed from output,Pending
+TC10,text_cleaner,Whitespace normalization,Text with repeated spaces/newlines,Single spaces only, no leading/trailing whitespace,Pending
+TC11,skill_extractor,Known skills detected,Text mentioning python sql pandas,All three skills found under correct categories,Pending
+TC12,skill_extractor,No skills present,Text with no technical terms,Empty result / friendly 'no skills detected' message,Pending
+TC13,skill_extractor,Multi-word skill priority,Text containing 'machine learning',Matched as one skill, not split into 'machine' + 'learning',Pending
+TC14,job_matcher,Match score computed,Resume matching Data Analyst skills,Data Analyst appears with high relative match score,Pending
+TC15,job_matcher,Ranking order,Resume with mixed skill set,Roles sorted from highest to lowest match_score,Pending
+TC16,job_matcher,Skill gap - matched skills,Resume with 3 of 5 required skills,3 skills returned as matched,Pending
+TC17,job_matcher,Skill gap - missing skills,Resume with 3 of 5 required skills,2 skills returned as missing,Pending
+TC18,job_matcher,Unknown target role,Role name not in dataset,ValueError raised with clear message,Pending
+TC19,roadmap_generator,Roadmap for missing skills,List of 3 missing skills,3 week-by-week roadmap steps generated,Pending
+TC20,roadmap_generator,No missing skills,Empty missing-skills list,Friendly 'no gaps found' message returned,Pending
+TC21,roadmap_generator,Report generation,Full analysis result set,Well-formatted text report with all sections present,Pending
+TC22,app,End-to-end happy path,Valid resume uploaded via UI,All 6 dashboard sections render without errors,Pending
+TC23,app,Report download,Click 'Download analysis report',.txt file downloads with correct content,Pending
+TC24,fairness,No protected attributes used,Resume mentioning age/gender/marital status,These fields do not affect match_score or skill extraction,Pending
